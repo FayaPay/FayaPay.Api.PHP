@@ -1,0 +1,7 @@
+stages: 
+  - run
+
+deploy:staging:
+  stage: run
+  script:
+    - echo "running"
