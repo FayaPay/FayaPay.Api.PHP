@@ -13,7 +13,7 @@
 /**
  * FayaPay API
  *
- * API Reference for FayaPay
+ * FayaPay API
  *
  * OpenAPI spec version: 1
  * Contact: support@fayapay.com
@@ -61,6 +61,7 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
         'id' => 'string',
         'reference' => 'string',
         'amount' => 'int',
+        'fee' => 'int',
         'currency' => 'string',
         'recipient_name' => 'string',
         'recipient_email' => 'string',
@@ -89,6 +90,7 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
         'id' => null,
         'reference' => null,
         'amount' => 'int32',
+        'fee' => 'int32',
         'currency' => null,
         'recipient_name' => null,
         'recipient_email' => null,
@@ -138,6 +140,7 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
         'id' => 'id',
         'reference' => 'reference',
         'amount' => 'amount',
+        'fee' => 'fee',
         'currency' => 'currency',
         'recipient_name' => 'recipientName',
         'recipient_email' => 'recipientEmail',
@@ -166,6 +169,7 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
         'id' => 'setId',
         'reference' => 'setReference',
         'amount' => 'setAmount',
+        'fee' => 'setFee',
         'currency' => 'setCurrency',
         'recipient_name' => 'setRecipientName',
         'recipient_email' => 'setRecipientEmail',
@@ -194,6 +198,7 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
         'id' => 'getId',
         'reference' => 'getReference',
         'amount' => 'getAmount',
+        'fee' => 'getFee',
         'currency' => 'getCurrency',
         'recipient_name' => 'getRecipientName',
         'recipient_email' => 'getRecipientEmail',
@@ -276,6 +281,7 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['reference'] = isset($data['reference']) ? $data['reference'] : null;
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
+        $this->container['fee'] = isset($data['fee']) ? $data['fee'] : null;
         $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['recipient_name'] = isset($data['recipient_name']) ? $data['recipient_name'] : null;
         $this->container['recipient_email'] = isset($data['recipient_email']) ? $data['recipient_email'] : null;
@@ -306,6 +312,9 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
         if ($this->container['amount'] === null) {
             $invalidProperties[] = "'amount' can't be null";
         }
+        if ($this->container['fee'] === null) {
+            $invalidProperties[] = "'fee' can't be null";
+        }
         if ($this->container['paid'] === null) {
             $invalidProperties[] = "'paid' can't be null";
         }
@@ -328,6 +337,9 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
     {
 
         if ($this->container['amount'] === null) {
+            return false;
+        }
+        if ($this->container['fee'] === null) {
             return false;
         }
         if ($this->container['paid'] === null) {
@@ -435,6 +447,30 @@ class DisbursementDTO implements ModelInterface, ArrayAccess
     public function setAmount($amount)
     {
         $this->container['amount'] = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Gets fee
+     *
+     * @return int
+     */
+    public function getFee()
+    {
+        return $this->container['fee'];
+    }
+
+    /**
+     * Sets fee
+     *
+     * @param int $fee A positive integer in the smallest currency unit (e.g. 100 pesewas to charge 1.00GHS) representing how much was charged as fees.
+     *
+     * @return $this
+     */
+    public function setFee($fee)
+    {
+        $this->container['fee'] = $fee;
 
         return $this;
     }

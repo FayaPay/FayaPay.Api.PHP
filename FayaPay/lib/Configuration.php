@@ -12,7 +12,7 @@
 /**
  * FayaPay API
  *
- * API Reference for FayaPay
+ * FayaPay API
  *
  * OpenAPI spec version: 1
  * Contact: support@fayapay.com
@@ -88,7 +88,7 @@ class Configuration
      *
      * @var string
      */
-    protected $userAgent = 'Swagger-Codegen/1.0.1/php';
+    protected $userAgent = 'Swagger-Codegen/1.0.2/php';
 
     /**
      * Debug switch (default set to false)
@@ -397,7 +397,7 @@ class Configuration
         $report .= '    OS: ' . php_uname() . PHP_EOL;
         $report .= '    PHP Version: ' . PHP_VERSION . PHP_EOL;
         $report .= '    OpenAPI Spec Version: 1' . PHP_EOL;
-        $report .= '    SDK Package Version: 1.0.1' . PHP_EOL;
+        $report .= '    SDK Package Version: 1.0.2' . PHP_EOL;
         $report .= '    Temp Folder Path: ' . self::getDefaultConfiguration()->getTempFolderPath() . PHP_EOL;
 
         return $report;

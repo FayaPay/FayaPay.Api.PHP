@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **string** | Unique identifier for the object. | [optional] 
 **reference** | **string** | Unique reference you provided. | [optional] 
 **amount** | **int** | A positive integer in the smallest currency unit (e.g. 100 pesewas to disburse 1.00GHS) representing how much was disbursed. | 
+**fee** | **int** | A positive integer in the smallest currency unit (e.g. 100 pesewas to charge 1.00GHS) representing how much was charged as fees. | 
 **currency** | **string** | Three-letter ISO currency code. e.g. &#x60;GHS&#x60; | [optional] 
 **recipient_name** | **string** | The recipient&#39;s name. | [optional] 
 **recipient_email** | **string** | The recipient&#39;s email address. Used for sending notifications. | [optional] 

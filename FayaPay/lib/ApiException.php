@@ -12,7 +12,7 @@
 /**
  * FayaPay API
  *
- * API Reference for FayaPay
+ * FayaPay API
  *
  * OpenAPI spec version: 1
  * Contact: support@fayapay.com

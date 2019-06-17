@@ -12,7 +12,7 @@
 /**
  * FayaPay API
  *
- * API Reference for FayaPay
+ * FayaPay API
  *
  * OpenAPI spec version: 1
  * Contact: support@fayapay.com
@@ -285,12 +285,12 @@ class PayoutsApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
-                ['application/json', 'application/xml']
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -560,12 +560,12 @@ class PayoutsApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
-                ['application/json', 'application/xml']
+                ['application/json'],
+                ['application/json']
             );
         }
 

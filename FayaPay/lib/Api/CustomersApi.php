@@ -12,7 +12,7 @@
 /**
  * FayaPay API
  *
- * API Reference for FayaPay
+ * FayaPay API
  *
  * OpenAPI spec version: 1
  * Contact: support@fayapay.com
@@ -307,11 +307,11 @@ class CustomersApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
+                ['application/json'],
                 ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json', 'application/xml', 'text/xml', 'application/_*+xml']
             );
         }
@@ -577,11 +577,11 @@ class CustomersApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
+                ['application/json'],
                 ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json']
             );
         }
@@ -844,12 +844,12 @@ class CustomersApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
-                ['application/json', 'application/xml']
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -1119,12 +1119,12 @@ class CustomersApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
-                ['application/json', 'application/xml']
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -1408,11 +1408,11 @@ class CustomersApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
+                ['application/json'],
                 ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json']
             );
         }

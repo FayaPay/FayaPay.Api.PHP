@@ -12,7 +12,7 @@
 /**
  * FayaPay API
  *
- * API Reference for FayaPay
+ * FayaPay API
  *
  * OpenAPI spec version: 1
  * Contact: support@fayapay.com
@@ -285,12 +285,12 @@ class RefundsApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
-                ['application/json', 'application/xml']
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -568,12 +568,12 @@ class RefundsApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
-                ['application/json', 'application/xml']
+                ['application/json'],
+                ['application/json']
             );
         }
 
@@ -857,11 +857,11 @@ class RefundsApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/json', 'application/xml']
+                ['application/json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/json', 'application/xml'],
+                ['application/json'],
                 ['application/json-patch+json', 'application/json', 'text/json', 'application/_*+json']
             );
         }
